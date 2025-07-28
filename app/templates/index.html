@@ -1,1 +1,19 @@
-@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>おたより掲示板</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>💌 おたより掲示板 💌</h1>
+    <form action="/post" method="post">
+        <input type="text" name="message" placeholder="おたより書いてね">
+        <button type="submit">送信</button>
+    </form>
+    <ul>
+        {% for msg in messages %}
+            <li>{{ msg }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
