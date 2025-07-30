@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: otayori-web
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app/app  # コード変更を即反映するように
+    environment:
+      - FLASK_APP=app/app.py
+      - FLASK_RUN_HOST=0.0.0.0
