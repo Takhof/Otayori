@@ -10,10 +10,10 @@
         <input type="text" name="message" placeholder="おたより書いてね">
         <button type="submit">送信</button>
     </form>
-    <ul>
-        {% for msg in messages %}
-            <li>{{ msg }}</li>
-        {% endfor %}
-    </ul>
+<ul>
+    {% for msg in messages %}
+        <li>{{ msg.content }}</li>
+    {% endfor %}
+</ul>
 </body>
 </html>
