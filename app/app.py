@@ -12,11 +12,6 @@ class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(300), nullable=False)
 
-# 初期化
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
 @app.route('/')
 def index():
     messages = Message.query.all()

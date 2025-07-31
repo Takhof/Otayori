@@ -19,4 +19,4 @@ ENV FLASK_RUN_HOST=0.0.0.0
 EXPOSE 5000
 
 # ⑦ Flaskを起動するコマンド
-CMD ["flask", "run"]
+CMD ["sh", "-c", "python app/init_db.py && flask run"]
